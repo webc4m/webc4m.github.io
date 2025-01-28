@@ -26,7 +26,7 @@ h1 {
 .template-button {
     text-decoration: none;
     padding: 15px 25px;
-    background-color: #007bff;
+    background-color: #7a0027;
     color: white;
     border-radius: 5px;
     font-size: 16px;
@@ -34,5 +34,5 @@ h1 {
 }
 
 .template-button:hover {
-    background-color: #0056b3;
+    background-color: #4a0017;
 }
