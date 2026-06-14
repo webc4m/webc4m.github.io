@@ -1,39 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ME2D</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ME2D</title>
 
-    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
-    <style>
-        html, body {
-            margin: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            overflow: hidden;
+<style>
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #game {
-            width: 722px;
-            height: 519px;
-            max-width: 100vw;
-            max-height: 100vh;
-        }
-    </style>
+/* THIS is the key */
+#game {
+    width: min(100vw, calc(100vh * (722 / 482)));
+    height: min(100vh, calc(100vw * (482 / 722)));
+}
+</style>
 </head>
+
 <body>
     <embed
         id="game"
         src="Package%20to%20run%20it%20offline/ea.comm.swf"
         type="application/x-shockwave-flash"
         width="722"
-        height="519">
+        height="482">
 </body>
 </html>
